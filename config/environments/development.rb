@@ -56,6 +56,8 @@ Rails.application.configure do
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 
+config.hosts << "04fcd5ba924f44c2a67d469539545e88.vfs.cloud9.us-east-2.amazonaws.com"
+
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
