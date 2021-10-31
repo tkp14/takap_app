@@ -14,19 +14,19 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  socket: /var/lib/mysql/mysql.sock
+  password: Taka-3500
+  host: localhost
 
 development:
   <<: *default
-  database: taka_app_development
+  database: takap_app_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: taka_app_test
+  database: takap_app_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: taka_app_production
+  database: takap_app_production
   username: taka_app
-  password: <%= ENV['TAKA_APP_DATABASE_PASSWORD'] %>
+  password: <%= ENV['TAKAP_APP_DATABASE_PASSWORD'] %>
